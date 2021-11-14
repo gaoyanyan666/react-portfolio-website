@@ -1,0 +1,14 @@
+:root {
+    --color-white: #ffffff;
+    --color-lightblue: rgb(3, 187, 190);
+    --color-blue: rgba(7, 138, 161, 0.8);
+    --color-green: #37af65;
+    --color-grey: #d8d8d8;
+    --color-black: #272626;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+}
