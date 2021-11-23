@@ -11,7 +11,6 @@ export default function Main() {
     return (
     <div className="App">
         <Topbar />
-      
         <Switch>
             <Route exact path ='/' component={HomePage} />
             <Route path ='/aboutPage' component={AboutPage} />
