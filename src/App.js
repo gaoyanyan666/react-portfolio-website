@@ -1,31 +1,34 @@
 import React from 'react';
 import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css";
-import Topbar from './components/topbar/Topbar';
-import Home from './components/home/Home';
-import About from './components/about/About';
-import Portfolio from './components/portfolio/Portfolio';
-import Contact from './components/contact/Contact';
-import Footer from './components/footer/Footer';
+import './global.css';
 import {BrowserRouter }from 'react-router-dom';
+import Main from './components/main/Main';
+// import { Provider } from 'react-redux';
+// import { ConfiguresStore } from './redux/configuresStore';
+
+
+
+// const store = ConfiguresStore();
+// <Provider store={store}>
+//     <BrowserRouter>
+//         <div className="App">
+//             <Main/>
+//         </div>
+//     </BrowserRouter>
+// </Provider>
 
 function App() {
-  return (
+return (
     <div className="App">
-      <BrowserRouter>
-      <Topbar />
-      <div className='sections'>
-      <Home/>
-      <About />
-      <Portfolio />
-      <Contact />
-      <Footer />
-      </div>
-      
-      </BrowserRouter>
-      
+            {/* <Provider store={store}> */}
+                <BrowserRouter>
+                    <div className="App">
+                        <Main/>
+                    </div>
+                </BrowserRouter>
+            {/* </Provider>   */}
     </div>
-  );
+);
 }
 
 export default App;

@@ -1,0 +1,49 @@
+.skill_row {
+    background: var(--color-grey);
+    height: 1.7rem;
+    position: relative;
+}
+
+.skill_row p {
+    background-color: var(--color-lightblue);
+    width: 4.5rem;
+    border-right: 1px solid var(--color-white);
+    height: 1.7rem;
+    color: var(--color-white);
+    font-size: .8rem;
+}
+
+.skill_view {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 1;
+    background: var(--color-blue);
+    transition: all 0.8s ease-out;
+}
+
+.skill_value {
+    position: absolute;
+    background-color: var(--color-blue);
+    line-height: 1rem;
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--color-white);
+    left: 100%;
+    bottom: 100%;
+    padding: 0 5px;
+    margin-bottom: 5px;
+    transform: translateX(-60%);
+}
+
+.skill_value:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -3px;
+    border-top: 5px solid var(--color-blue);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
