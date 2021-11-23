@@ -9,14 +9,14 @@ import { Switch, Route, Redirect} from 'react-router-dom';
 
 export default function Main() {
     return (
-    <div>
+    <div className="App">
         <Topbar />
       
         <Switch>
-            <Route  path ='/home' render={()=><HomePage/>} />
-            <Route exact path ='/aboutPage' render={()=><AboutPage/>}/>
-            <Route exact  path ='/portfolioPage' render={()=><PortfolioPage/>}/>
-            <Route exact  path ='/contactPage' render={()=><ContactPage/>} />
+            <Route exact path ='/' component={HomePage} />
+            <Route path ='/aboutPage' component={AboutPage} />
+            <Route  path ='/portfolioPage' component={PortfolioPage} />
+            <Route  path ='/contactPage' component={ContactPage} />
             <Redirect to = '/' />
 
         </Switch>

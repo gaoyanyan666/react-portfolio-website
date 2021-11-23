@@ -1,54 +1,29 @@
 import React from 'react';
-import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem} from 'reactstrap';
-import {NavLink} from "react-router-dom";
+import { Container, Navbar,Nav } from 'react-bootstrap';
+
 import './navbar.css';
 
-class Topbar extends React.Component{
 
-    constructor(props) {
-        super(props);
-        this.toggleNav = this.toggleNav.bind(this);
-        this.state={
-            isNavOpen:false
-        };
-    }
-    toggleNav=()=>{
-        this.setState({
-            isNavOpen: !this.state.isNavOpen
-        });
-    }
-    
-    render() {
-        return (
-            <React.Fragment>
-            <Navbar expand="md" dark full fixed="top" className='navbar navbar-dark'>
-                <div  className="container">
-                <NavbarBrand href="/home" style={{color:'crimson'}} className='navbar-brand'>AGO</NavbarBrand>
-                <NavbarToggler className="navbar-toggler" onClick ={this.toggleNav} />
-                <Collapse isOpen={this.state.isNavOpen} navbar className="navbar-collapse">
-                <Nav navbar className="ml-auto navbar-nav">
-                <NavItem className="nav-item active">
-                    <NavLink className="nav-link" to="/home">Home</NavLink>
-                </NavItem>
-                <NavItem className="nav-item">
-                    <NavLink className="nav-link" to="/aboutPage">About</NavLink>
-                </NavItem>
-                <NavItem className="nav-item">
-                    <NavLink className="nav-link" to="/portfolioPage">Portfolio</NavLink>
-                </NavItem>
-                <NavItem className="nav-item">
-                    <NavLink className="nav-link" to="/contactPage">Contact</NavLink>
-                </NavItem>
-                </Nav>
-                </Collapse>
-                </div>
-            </Navbar>
-            </React.Fragment>
-            
-            
-            
-                )
-    }
-
+export default function Topbar() {
+    return (
+    <>
+<Navbar collapseOnSelect expand="md" bg="dark" variant="dark" className='navbar navbar-dark' fixed="top">
+    <Container>
+        <Navbar.Brand href="/home"  className='navbar-brand' style={{color:'crimson'}} >AGO</Navbar.Brand>
+        <Navbar.Toggle className="navbar-toggler" aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+            <div className="me-auto"></div>
+        <Nav className="navbar-nav me-2">
+            <Nav.Link  href="/">Home</Nav.Link>
+            <Nav.Link  href="/aboutPage">About</Nav.Link>
+            <Nav.Link  href="/portfolioPage">Portfolio</Nav.Link>
+            <Nav.Link  href="/contactPage">Contact</Nav.Link>
+        </Nav>
+</Navbar.Collapse>
+</Container>
+</Navbar>
+        </>
+    )
 }
-export default Topbar;
+
+
