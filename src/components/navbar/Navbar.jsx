@@ -10,15 +10,26 @@ export default function Topbar() {
     <>
 <Navbar collapseOnSelect expand="md" bg="dark" variant="dark" className='navbar navbar-dark' fixed="top">
     <Container>
-        <Navbar.Brand href="/home"  className='navbar-brand' style={{color:'crimson'}} >AGO</Navbar.Brand>
-        <Navbar.Toggle className="navbar-toggler" aria-controls="responsive-navbar-nav" />
+        <Navbar.Brand as={Link} to="/home"  className='navbar-brand' style={{color:'crimson'}} >AGO</Navbar.Brand>
+
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" class="navbar-toggler" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation" >
+        
+        </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
             <div className="me-auto"></div>
-        <Nav className="navbar-nav me-2">
-            <Nav.Link  as={Link} to="/">Home</Nav.Link>
-            <Nav.Link  as={Link} to="/aboutPage">About</Nav.Link>
-            <Nav.Link  as={Link} to="/portfolioPage">Portfolio</Nav.Link>
-            <Nav.Link  as={Link} to="/contactPage">Contact</Nav.Link>
+        <Nav className="navbar-nav me-1"  defaultActiveKey="/home" >
+            <Nav.Item as="li">
+            <Nav.Link  as={Link} to="/" eventKey="link-1">Home</Nav.Link>
+            </Nav.Item>
+            <Nav.Item as="li">
+            <Nav.Link  as={Link} to="/aboutPage" eventKey="link-2">About</Nav.Link>
+            </Nav.Item>
+            <Nav.Item as="li">
+            <Nav.Link  as={Link} to="/portfolioPage" eventKey="link-3">Portfolio</Nav.Link>
+            </Nav.Item>
+            <Nav.Item as="li">
+            <Nav.Link  as={Link} to="/contactPage" eventKey="link-4">Contact</Nav.Link>
+            </Nav.Item>
         </Nav>
 </Navbar.Collapse>
 </Container>
