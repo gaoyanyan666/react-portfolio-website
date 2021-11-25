@@ -1,7 +1,26 @@
-.footer {
-    background-color: grey;
-}
-
-.fab {
-    font-size: 1.5rem;
-}
+    .footer {
+        background-color: grey;
+        overflow: hidden;
+    }
+    
+    .fa,
+    .fas {
+        font-size: 1.5rem;
+        overflow: hidden;
+    }
+    
+    a:link {
+        text-decoration: none;
+    }
+    
+    a:visited {
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    a:active {
+        text-decoration: underline;
+    }

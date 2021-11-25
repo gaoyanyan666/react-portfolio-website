@@ -13,7 +13,7 @@ export default function Topbar() {
         <Navbar.Brand as={Link} to="/home"  className='navbar-brand' style={{color:'crimson'}} >AGO</Navbar.Brand>
 
         <Navbar.Toggle aria-controls="responsive-navbar-nav" class="navbar-toggler" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation" >
-        
+        <div class="animated-icon"><span></span><span></span><span></span></div>
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
             <div className="me-auto"></div>
